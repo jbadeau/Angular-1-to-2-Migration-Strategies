@@ -101,7 +101,7 @@
 					<ul>
 						<li>I component per file</li>
 						<li>Organize code by feature not component type</li>
-						<li>Utilize modern loaders like JSPM or Webpack (hint: previous meetup<a href="http://www.meetup.com/AngularJS-ZRH/events/228787617/" target="_blank">JSPM presentation</a>)
+						<li>Utilize modern loaders like JSPM or Webpack (hint: previous meetup <a href="http://www.meetup.com/AngularJS-ZRH/events/228787617/" target="_blank">JSPM presentation</a>)
 						</li>
 					</ul>
 				</section>
@@ -112,7 +112,7 @@
 						<li>Similar to Angular 2 components</li>
 						<li>Provide declarative interfaces via attributes</li>
 						<li>Can utilize uni-directional data-binding</li>
-						<li>Previous meetup<a href="https://github.com/tomastrajan/component-pattern-for-angular-js-1-x" target="_blank">Component Pattern for Angular 1.x</a>)
+						<li>Previous meetup <a href="https://github.com/tomastrajan/component-pattern-for-angular-js-1-x" target="_blank">Component Pattern for Angular 1.x</a>)
 						</li>
 					</ul>
 				</section>
@@ -121,12 +121,12 @@
 			<section>
 				<section>
 					<h2>Choosing your Language Specification</h2>
-					<p>Angular is written in Typescript but can be used with ES5, ES6/ES7 or TypeScript.</p>
+					<p>Angular is written in Typescript but can be used with ES5 or ES6/ES7</p>
 				</section>
 				<section>
 					<h2>TypeScript</h2>
 					<ul>
-						<li>Most stable and tested path</li>
+						<li>Most stable and tested</li>
 						<li>Can work side by side with ES5 and ES6</li>
 						<li>Best suited for large code bases</li>
 						<li>Easiest to refactor</li>
@@ -138,9 +138,8 @@
 					<h2>ES6/ES7</h2>
 					<ul>
 						<li>Most complex workflow setup</li>
-						<li>Most popular. Over 45% of developers say they plan to use es6 and 10% are unsure</li>
+						<li>Most popular. Over 45% of developers say they plan to use ES6 and 10% are unsure</li>
 						<li>Provides many of the benefits of TypeScript</li>
-						<li>Many available Shims/Polyfills so that you code can run as is</li>
 					</ul>
 				</section>
 				<section>
@@ -158,7 +157,6 @@
 			<section>
 				<section>
 					<h2>Choosing your modual loader and build tools</h2>
-					<p>Angular is written in Typescript but can be used with ES5, ES6/ES7 or TypeScript.</p>
 				</section>
 				<section>
 					<h2>SystemJS</h2>
@@ -174,7 +172,7 @@
 						<li>Utilizes SystemJS</li>
 						<li>Adds advanced dependency managament support</li>
 						<li>Easy to connect to mutiple repositories like npm, github, private, etc</li>
-						<li>Has some known issues with SystemJs and Babel 6 which affect Angular 2</li>
+						<li>Has some known issues with SystemJS and Babel 6 which affect Angular 2</li>
 					</ul>
 				</section>
 				<section>
@@ -193,18 +191,19 @@
 						<li>Babel 5 is deprecated</li>
 						<li>Babel 6 is the future</li>
 						<li>Babel 6 removed support for decorators which requires workarounds to work with Angular 2.</li>
-						<li>Babel 5 currentyl has the most support, examples and documentation</li>
+						<li>Babel 5 currently has the most support, examples and documentation</li>
 					</ul>
 				</section>
 			</section>
 
 			<section>
-				<h2>Why did I choose ES6/ES7 and Webpack?</h2>
+				<h2>Why did I choose ES6/ES7 Webpack and Babel 6?</h2>
 				<ul>
-					<li>The majority of angular 1.x apps are written in ES6/ES7</li>
-					<li>ES6/ES7 is by currenlyt where the majority of developers are moving to</li>
-					<li>Many parts of TypeScript will make their way to ES6/ES7</li>
-					<li>I prefer JSPM but it has some known issues (systemjs registration and angular reflect)</li>
+					<li>The majority of angular 1.x apps are now written in ES6/ES7</li>
+					<li>ES6/ES7 is by currently where the majority of developers are moving to</li>
+					<li>Many parts of TypeScript will make their way to ES6/ES7 anyway</li>
+					<li>I prefer JSPM but it has some known issues (SystemJS registration and angular reflect)</li>
+					<li>Babel 6 is constantly improving and the intitial integration pain is mostly a one time thing</li>
 				</ul>
 			</section>
 
@@ -216,13 +215,12 @@
 				<section>
 					<h2>Step 1 - Build</h2>
 					<ul>
-						<li>Upgrade angular to v1.5 for new component directive</li>
+						<li>Upgrade Angular to v1.5 for new component directive</li>
 						<li>Upgrade ui-router to v1.0.0 for new component routing</li>
-						<li>Upgrade to babel v6 as v5 is deprecated</li>
-						<li>Tip - Use angular 2.0.0-beta.15 as other versions have issues with ui-router</li>
-						<li>Tip - <a href="http://blog.thoughtram.io/angular/2015/05/03/the-difference-between-annotations-and-decorators.html" target="_blank">Annotations and Decorators are not the same</a>. Decorators are the way forward
-						</li>
-						<li>Tip - Babel 6 removed support for decorators and therefore extra plugins are needed</li>
+						<li>Upgrade to Babel v6 as v5 is deprecated</li>
+						<li>Tip - Use angular 2.0.0-beta.15 as other versions have issues with ui-router 1.0.0</li>
+						<li>Tip - <a href="http://blog.thoughtram.io/angular/2015/05/03/the-difference-between-annotations-and-decorators.html" target="_blank">Annotations and Decorators are not the same</a>. Decorators are the way forward</li>
+						<li>Tip - Babel 6 removed support for decorators and therefore extra plugins are required</li>
 					</ul>
 				</section>
 				<section>
@@ -238,9 +236,9 @@
 				<section>
 					<h2>Step 3 - NG2 Components 1</h2>
 					<ul>
-						<li>Import zones.js which is like a thread-local storage and is heavily used by Angulare 2 as a $digest replacement</li>
+						<li>Import zones.js which is like a thread-local storage and is heavily used by Angular 2 as a $digest replacement</li>
 						<li>Import reflect-metadata which provides proposed ES7 decorator (@) and metadata refective support.</li>
-						<li>Import and creare a constant angular2/upgrade singleton which provides support for interpolarity between Angular 1 and 2</li>
+						<li>Import and create a constant angular2/upgrade singleton which provides interpolarity between Angular 1 and 2</li>
 						<li>Convert Angular 1 directives to Angular 2 components (feature-a-component and some-component)</li>
 						<li>Convert Angular 1 templates to Angular 2 templates by removing $ctrl and converting ng-click to (click)</li>
 					</ul>
@@ -251,8 +249,7 @@
 						<li>Inject Upgraded $state service into Angular 2 components to utilize ui-router</li>
 						<li>Downgrade any Angular 2 directives with angular2/upgrade to be used within Angular 1.</li>
 						<li>Manually bootstrap angular 1 and 2 with the upgrade adapter (remove ng-app)</li>
-						<li>Tip - If your using TypeScript<a href="https://github.com/ui-router/ng1-to-ng2">ng1-to-ng2</a> provides a ui-router bridge (can use ui-router directives in Angular 2 components)
-						</li>
+						<li>Tip - If your using TypeScript<a href="https://github.com/ui-router/ng1-to-ng2">ng1-to-ng2</a> provides a ui-router bridge (can use ui-router directives in Angular 2 components). Does not work with ES& without heavy workarounds</li>
 					</ul>
 				</section>
 				<section>
@@ -263,14 +260,13 @@
 						<li>Replace index.html markup with an Angular 2 root component</li>
 						<li>Register routes with the new <a href="https://docs.angularjs.org/img/guide/component-based-architecture.svg" target="_blank"> component router</a></li>
 						<li>Convert ui-router directives ui-sref and ui-sref-active to component router equivalents routerLink and router-link-active css class</a></li>
-						<li>Convert ui-router directives ui-sref and ui-sref-active to component router equivalents routerLink and router-link-active css class</a></li>
 					</ul>
 				</section>
 			</section>
 
 			<section>
 				<section>
-					<h2>My impressions</h2>
+					<h2>My impressions and Recommendations</h2>
 				</section>
 				<section>
 					<ul>
@@ -282,7 +278,7 @@
 				</section>
 				<section>
 					<ul>
-						<li>Migrate from the bottom up. There are issue with ui-router and upgraded angular 1 components</li>
+						<li>Migrate from the bottom up. There are issue with ui-router and upgraded angular 1 components (ng1 in ng2)</li>
 						<li>There are still many undocumented breaking changes going on. Prepare yourself for digging into the sourcecode, trolling slack and opening github issues</li>
 						<li>Angular 2 feels very polished and really reduces boilerplate but the many incompatibilities, lack of 3rd party support and documentation make it a rather painful migration at the moment.</li>
 					</ul>
